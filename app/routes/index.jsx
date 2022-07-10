@@ -1,32 +1,26 @@
+import * as React from 'react';
+import Navbar from '~/components/navbar'
+import Hero from '~/components/hero';
+
+
+
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
+    <div className="relative bg-white overflow-hidden">
+      <div className="hidden sm:block sm:absolute sm:inset-0" aria-hidden="true">
+      </div>
+      <div className="relative pt-6 pb-16 sm:pb-24">
+        <Navbar/>
+        <main className="mt-16 sm:mt-24">
+          <div className="mx-auto max-w-7xl">
+           <Hero/>
+
+            {/* 
+              Konten
+            */}
+          </div>
+        </main>
+      </div>
     </div>
-  );
+  )
 }
